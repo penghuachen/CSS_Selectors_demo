@@ -27,8 +27,8 @@ pre {
   flex-wrap: wrap;
   border: 1px solid #000;
   margin-left: 20px;
-  font-weight: bold;
   font-size: 18px;
+  /* font-weight: bold; */
 }
 
 .demo > div {
