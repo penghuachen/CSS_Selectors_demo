@@ -175,12 +175,172 @@ const arr = [
     `,
     description: `匹配 p 標籤中 class 屬性的值包含零或多個連字號(-)且以左起開始值為 color 的元素。`,
   },
+  {
+    id: 10,
+    domStructure: ``,
+    cssSelector: `:root`,
+    cssStyle: `background: #f00;`,
+    csstructure: `
+  :root {
+    background: #f00;
+  }
+    `,
+    description: `匹配 E 為根元素的元素，在 HTML 通常為 <htmlL> 元素。`,
+  },
+  {
+    id: 11,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <p>This is a text2.</p>
+    <p>This is a text3.</p>
+    <p>This is a text4.</p>
+    <p>This is a text5.</p>
+  </div>
+    `,
+    cssSelector: `p:nth-child(2n+1)`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:nth-child(2n+1) {
+    color: #00f;
+  }
+    `,
+    description: `匹配 p 標籤中符合 2n+1 規則的元素，此為第1個、第3個及第5個。`,
+  },
+  {
+    id: 12,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <p>This is a text2.</p>
+    <p>This is a text3.</p>
+    <p>This is a text4.</p>
+    <p>This is a text5.</p>
+  </div>
+    `,
+    cssSelector: `p:nth-last-child(2)`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:nth-last-child(2) {
+    color: #00f;
+  }
+    `,
+    description: `匹配 p 標籤的倒數第二個元素`,
+  },
+  {
+    id: 13,
+    domStructure: `  
+  <div class="example-area">
+    <span>This is a span.</span>
+    <p>This is a text1.</p>
+    <p>This is a text2.</p>
+    <span>This is a span.</span>
+    <p>This is a text3.</p>
+    <p>This is a text4.</p>
+    <span>This is a span.</span>
+    <p>This is a text5.</p>
+  </div>
+    `,
+    cssSelector: `p:nth-of-type(2n+1)`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:nth-of-type(2n+1) {
+    color: #00f;
+  }
+    `,
+    description: `匹配 p 標籤，且符合 2n+1 規則的元素。`,
+  },
+  {
+    id: 14,
+    domStructure: `  
+  <div class="example-area">
+    <span>This is a span.</span>
+    <p>This is a text1.</p>
+    <p>This is a text2.</p>
+    <span>This is a span.</span>
+    <p>This is a text3.</p>
+    <p>This is a text4.</p>
+    <span>This is a span.</span>
+    <p>This is a text5.</p>
+  </div>
+    `,
+    cssSelector: `p:nth-last-of-type(2)`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:nth-last-of-type(2) {
+    color: #00f;
+  }
+    `,
+    description: `匹配 p 標籤的倒數第二個元素。`,
+  },
+  {
+    id: 15,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <p>This is a text2.</p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `p:first-child`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:first-child {
+    color: #00f;
+  }
+    `,
+    description: `匹配兄弟節點，p 標籤為第ㄧ個子元素的元素。`,
+  },
+  {
+    id: 16,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <p>This is a text2.</p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `p:last-child`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:last-child {
+    color: #00f;
+  }
+    `,
+    description: `匹配兄弟節點 p 標籤為最後ㄧ個子元素的元素。`,
+  },
+  {
+    id: 17,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <span>This is a span.</span>
+    <p>This is a text2.</p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `p:first-of-type`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:first-of-type {
+    color: #00f;
+  }
+    `,
+    description: `匹配 p 標籤的第一個元素。`,
+  },
 ];
 
 const select = document.querySelector('#select');
 select.addEventListener('change', getOptionValue);
 function getOptionValue(e) {
-  const optionValue = e.target.value
+  const optionValue = e.target.value;
+  // 處理例外情況
+  if(optionValue === '10') {
+    document.body.style.background = 'transparent';
+  }
+  else {
+    document.body.style.background = 'cornsilk';
+  }
   document.querySelector('.example-area').innerHTML = arr[optionValue].domStructure;
   document.querySelectorAll(`${arr[optionValue].cssSelector}`).forEach(el => {
     el.style = arr[optionValue].cssStyle;
