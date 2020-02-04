@@ -353,7 +353,9 @@ const arr = [
   <div class="example-area">
     <p>This is a text1.</p>
     <span>This is a span.</span>
-    <p>This is a text2.<span>This is inner span.</span></p>
+    <p>This is a text2.
+      <span>This is inner span.</span>
+    </p>
     <p>This is a text3.</p>
   </div>
     `,
@@ -373,7 +375,9 @@ const arr = [
     <p>This is a text1.</p>
     <span>This is a span.</span>
     <span>This is a span.</span>
-    <p>This is a text2.<span>This is inner span.</span></p>
+    <p>This is a text2.
+      <span>This is inner span.</span>
+    </p>
     <p>This is a text3.</p>
   </div>
     `,
@@ -505,6 +509,7 @@ const arr = [
   <div class="example-area">
     <p class="line">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore.</p>
+  </div>
     `,
     cssSelector: `p`,
     cssStyle: ``,
@@ -520,6 +525,7 @@ const arr = [
   <div class="example-area">
     <p class="letter">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore.</p>
+  </div>
     `,
     cssSelector: `p`,
     cssStyle: ``,
@@ -535,6 +541,7 @@ const arr = [
   <div class="example-area">
     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore.</p>
+  </div>
     `,
     cssSelector: `p`,
     cssStyle: ``,
@@ -551,6 +558,7 @@ const arr = [
   <div class="example-area">
     <p class="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
     sed do eiusmod tempor incididunt ut labore.</p>
+  </div>
     `,
     cssSelector: `p`,
     cssStyle: ``,
@@ -567,6 +575,7 @@ const arr = [
   <div class="example-area">
     <p class="text3">Lorem ipsum dolor sit amet.</p>
     <p>Lorem ipsum dolor sit amet.</p>
+  </div>
     `,
     cssSelector: `.text3`,
     cssStyle: `color: #00f;`,
@@ -582,6 +591,7 @@ const arr = [
   <div class="example-area">
     <p id="myid">Lorem ipsum dolor sit amet.</p>
     <p>Lorem ipsum dolor sit amet.</p>
+  </div>
     `,
     cssSelector: `#myid`,
     cssStyle: `color: #00f;`,
@@ -598,6 +608,7 @@ const arr = [
     <p>Lorem ipsum dolor sit amet.</p>
     <p>Lorem ipsum dolor sit amet.</p>
     <span>Lorem ipsum dolor sit amet.</span>
+  </div>
     `,
     cssSelector: `p:not(.example-area)`,
     cssStyle: `color: #00f;`,
@@ -614,6 +625,7 @@ const arr = [
     <p>Lorem ipsum dolor sit amet. 
       <span>Lorem ipsum dolor sit amet.</span>
     </p>
+  </div>
     `,
     cssSelector: `p span`,
     cssStyle: `color: #00f;`,
@@ -631,6 +643,7 @@ const arr = [
       <span>Lorem ipsum dolor sit amet.</span>
       <i>Lorem ipsum dolor sit amet.</i>
     </p>
+  </div>
     `,
     cssSelector: `p > span`,
     cssStyle: `color: #00f;`,
@@ -648,6 +661,7 @@ const arr = [
       <span>Lorem ipsum dolor sit amet.</span>
     </p>
     <span>Lorem ipsum dolor sit amet.</span>
+  </div>
     `,
     cssSelector: `p + span`,
     cssStyle: `color: #00f;`,
@@ -665,6 +679,7 @@ const arr = [
       <span>Lorem ipsum dolor sit amet.</span>
     </p>
     <span>Lorem ipsum dolor sit amet.</span>
+  </div>
     `,
     cssSelector: `p ~ span`,
     cssStyle: `color: #00f;`,
