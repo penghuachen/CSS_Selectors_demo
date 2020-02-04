@@ -328,6 +328,352 @@ const arr = [
     `,
     description: `匹配 p 標籤的第一個元素。`,
   },
+  {
+    id: 18,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <span>This is a span.</span>
+    <p>This is a text2.</p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `p:last-of-type`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:last-of-type {
+    color: #00f;
+  }
+    `,
+    description: `匹配 p 標籤的最後一個元素。`,
+  },
+  {
+    id: 19,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <span>This is a span.</span>
+    <p>This is a text2.<span>This is inner span.</span></p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `span:only-child`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  span:only-child {
+    color: #00f;
+  }
+    `,
+    description: `匹配 span 標籤中沒有兄弟節點的元素。`,
+  },
+  {
+    id: 20,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <span>This is a span.</span>
+    <span>This is a span.</span>
+    <p>This is a text2.<span>This is inner span.</span></p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `span:only-of-type`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  span:only-of-type {
+    color: #00f;
+  }
+    `,
+    description: `匹配兄弟節點中沒有其他相同元素名稱的 span 標籤。`,
+  },
+  {
+    id: 21,
+    domStructure: `  
+  <div class="example-area">
+    <p>This is a text1.</p>
+    <span>This is a span.</span>
+    <span>This is a span.</span>
+    <p></p>
+    <p>This is a text3.</p>
+  </div>
+    `,
+    cssSelector: `p:empty`,
+    cssStyle: `background: #f00; width: 348px;height: 10px;`,
+    csstructure: `
+  p:empty {
+    background: #00f;
+    width: 348px;
+    height: 10px;
+  }
+    `,
+    description: `匹配 ｐ 標籤中沒有子元素(其他節點)的元素。`,
+  },
+  {
+    id: 22,
+    domStructure: `  
+  <div class="example-area">
+    <a href="#target">target</a>
+    <p id="target">text1.</p>
+  </div>
+    `,
+    cssSelector: `example-area`,
+    cssStyle: ``,
+    csstructure: `
+    a:link { color:#00f }
+    a:visited { color:#f00 }
+    a:active { color:#00f }
+    a:focus { color:#aad }
+    a:hover { 
+      background:#00f; 
+      color: #fff; 
+    }
+    p:target { 
+      background:#000; 
+      color: #fff; 
+    }
+    `,
+    description: `a 標籤中各種連結偽類選擇器的使用。`,
+  },
+  {
+    id: 23,
+    domStructure: `  
+  <div class="example-area">
+    <p lang="en">text1.</p>
+    <p lang="fr">text2.</p>
+  </div>
+    `,
+    cssSelector: `p:lang(en)`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  p:lang(en) {
+    color: #f00;
+  }`,
+    description: `匹配語系為 en 的 p 標籤元素。`,
+  },
+  {
+    id: 24,
+    domStructure: `  
+  <div class="example-area">
+    <span>enabled 狀態</span>
+    <input type="text"/>
+  </div>
+    `,
+    cssSelector: `input:enabled`,
+    cssStyle: `color: #f00;`,
+    csstructure: `
+  input:enabled {
+    color: #f00;
+  }`,
+    description: `當 <input> 元素處於啟用狀態時，輸入的文字顏色為紅色。`,
+  },
+  {
+    id: 25,
+    domStructure: `  
+  <div class="example-area">
+    <span>disabled 狀態</span>
+    <input type="text" disabled="disabled" value="disabled text"/>
+  </div>
+    `,
+    cssSelector: `input:disabled`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  input:disabled {
+    color: #00f;
+  }`,
+    description: `當 <input> 元素處於不能啟用狀態時，預設文字顏色為藍色。`,
+  },
+  {
+    id: 26,
+    domStructure: `  
+  <div class="example-area">
+    <span>checked 狀態</span>
+    <input type="radio"/>
+    <input type="checkbox"/>
+  </div> 
+    `,
+    cssSelector: `input`,
+    cssStyle: ``,
+    csstructure: `
+  input:checked {
+    box-shadow: 0 0 0 3px orange;
+  }`,
+    description: `當 input 的元素 radio 與 checkbox 處於被勾選狀態時，預設陰影為橘色。`,
+  },
+  {
+    id: 27,
+    domStructure: `  
+  <div class="example-area">
+    <p class="line">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore.</p>
+    `,
+    cssSelector: `p`,
+    cssStyle: ``,
+    csstructure: `
+  .line::first-line {
+    color: #f00;
+  }`,
+    description: `p 標籤中文字段落的第一行文字顏色改變。`,
+  },
+  {
+    id: 28,
+    domStructure: `  
+  <div class="example-area">
+    <p class="letter">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore.</p>
+    `,
+    cssSelector: `p`,
+    cssStyle: ``,
+    csstructure: `
+  .letter::first-letter {
+    color: #f00;
+  }`,
+    description: `p 標籤中文字段落的第一行的第一個字母文字顏色改變。`,
+  },
+  {
+    id: 29,
+    domStructure: `  
+  <div class="example-area">
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore.</p>
+    `,
+    cssSelector: `p`,
+    cssStyle: ``,
+    csstructure: `
+  .text::before {
+    content: 'Pseudo text.';
+    color: #00f;
+  }`,
+    description: `在 p 標籤中文字段落的最前方加入的 Pseudo text 的字樣。`,
+  },
+  {
+    id: 30,
+    domStructure: `  
+  <div class="example-area">
+    <p class="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore.</p>
+    `,
+    cssSelector: `p`,
+    cssStyle: ``,
+    csstructure: `
+  .text2::after {
+    content: 'Pseudo text.';
+    color: #00f;
+  }`,
+    description: `在 p 標籤中文字段落的最前方加入的 Pseudo text 的字樣。`,
+  },
+  {
+    id: 31,
+    domStructure: `  
+  <div class="example-area">
+    <p class="text3">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    `,
+    cssSelector: `.text3`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  .text3 {
+    color: #00f;
+  }`,
+    description: `改變類別選擇器名稱為 text3 的 p 標籤的文字顏色。`,
+  },
+  {
+    id: 32,
+    domStructure: `  
+  <div class="example-area">
+    <p id="myid">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    `,
+    cssSelector: `#myid`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  #myid {
+    color: #00f;
+  }`,
+    description: `改變ID選擇器名稱為 myid 的 p 標籤的文字顏色。`,
+  },
+  {
+    id: 33,
+    domStructure: `  
+  <div class="example-area">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <span>Lorem ipsum dolor sit amet.</span>
+    `,
+    cssSelector: `p:not(.example-area)`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  :not(p) {
+    color: #00f;
+  }`,
+    description: `匹配除了 class 名稱為 example-area 之外的 p 標籤。`,
+  },
+  {
+    id: 34,
+    domStructure: `  
+  <div class="example-area">
+    <p>Lorem ipsum dolor sit amet. 
+      <span>Lorem ipsum dolor sit amet.</span>
+    </p>
+    `,
+    cssSelector: `p span`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  p span {
+    color: #00f;
+  }`,
+    description: `匹配 p 標籤中所有 span 標籤的元素(不限制是否為 p 的子元素)。`,
+  },
+  {
+    id: 35,
+    domStructure: `  
+  <div class="example-area">
+    <p>Lorem ipsum dolor sit amet. 
+      <span>Lorem ipsum dolor sit amet.</span>
+      <i>Lorem ipsum dolor sit amet.</i>
+    </p>
+    `,
+    cssSelector: `p > span`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  p > span {
+    color: #00f;
+  }`,
+    description: `匹配 p 標籤中子元素為 span 標籤的元素。`,
+  },
+  {
+    id: 36,
+    domStructure: `  
+  <div class="example-area">
+    <p>Lorem ipsum dolor sit amet. 
+      <span>Lorem ipsum dolor sit amet.</span>
+    </p>
+    <span>Lorem ipsum dolor sit amet.</span>
+    `,
+    cssSelector: `p + span`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  p + span {
+    color: #00f;
+  }`,
+    description: `匹配與 p 標籤同層級且緊接著的 span 的標籤。`,
+  },
+  {
+    id: 37,
+    domStructure: `  
+  <div class="example-area">
+    <p>Lorem ipsum dolor sit amet. 
+      <span>Lorem ipsum dolor sit amet.</span>
+    </p>
+    <span>Lorem ipsum dolor sit amet.</span>
+    `,
+    cssSelector: `p ~ span`,
+    cssStyle: `color: #00f;`,
+    csstructure: `
+  p ~ span {
+    color: #00f;
+  }`,
+    description: `匹配 p 標籤後同層級的所有 span 標籤。`,
+  },
 ];
 
 const select = document.querySelector('#select');
