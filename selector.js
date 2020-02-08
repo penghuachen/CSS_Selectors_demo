@@ -36,10 +36,10 @@ const arr = [
     <p>This is a text4.</p>
   </div>
     `,
-    cssSelector: `.example-area p`,
+    cssSelector: `p`,
     cssStyle: `color: #00f;`,
     csstructure: `
-  .example-area p{
+  p{
     color: #00f;
   }
     `,
@@ -605,18 +605,18 @@ const arr = [
     id: 33,
     domStructure: `  
   <div class="example-area">
-    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="text3">Lorem ipsum dolor sit amet.</p>
     <p>Lorem ipsum dolor sit amet.</p>
     <span>Lorem ipsum dolor sit amet.</span>
   </div>
     `,
-    cssSelector: `p:not(.example-area)`,
+    cssSelector: `p:not(.text3)`,
     cssStyle: `color: #00f;`,
     csstructure: `
-  :not(p) {
+  p:not(.text3) {
     color: #00f;
   }`,
-    description: `匹配除了 class 名稱為 example-area 之外的 p 標籤。`,
+    description: `匹配除了 class 名稱為 text3 之外的 p 標籤。`,
   },
   {
     id: 34,
