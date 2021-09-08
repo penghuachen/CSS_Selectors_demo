@@ -1,10 +1,9 @@
-
 const arr = [
   {
     id: 0,
-    domStructure: '',
-    csstructure: '',
-    description: '',
+    domStructure: "",
+    cssStructure: "",
+    description: "",
   },
   {
     id: 1,
@@ -19,7 +18,7 @@ const arr = [
     `,
     cssSelector: `.example-area *`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   .example-area *{
     color: #f00;
   }
@@ -38,8 +37,8 @@ const arr = [
     `,
     cssSelector: `p`,
     cssStyle: `color: #00f;`,
-    csstructure: `
-  p{
+    cssStructure: `
+  p {
     color: #00f;
   }
     `,
@@ -58,7 +57,7 @@ const arr = [
     `,
     cssSelector: `p[title]`,
     cssStyle: `color: #f0f;`,
-    csstructure: `
+    cssStructure: `
   p[title] {
     color: #f0f;
   }
@@ -77,7 +76,7 @@ const arr = [
     `,
     cssSelector: `p[class="font-style"]`,
     cssStyle: `font-size: 26px;`,
-    csstructure: `
+    cssStructure: `
   p[class="font-style"] {
     font-size: 20px;
   }
@@ -96,7 +95,7 @@ const arr = [
     `,
     cssSelector: `p[class~="font-style"]`,
     cssStyle: `font-size: 26px;`,
-    csstructure: `
+    cssStructure: `
   p[class~="font-style"] {
     font-size: 20px;
   }
@@ -114,7 +113,7 @@ const arr = [
     `,
     cssSelector: `p[class^="color"]`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p[class^="color"] {
     color: #f00;
   }
@@ -132,7 +131,7 @@ const arr = [
     `,
     cssSelector: `p[class$="color"]`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p[class$="color"] {
     color: #f00;
   }
@@ -150,7 +149,7 @@ const arr = [
     `,
     cssSelector: `p[class*="lor"]`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p[class*="lor"] {
     color: #f00;
   }
@@ -168,7 +167,7 @@ const arr = [
     `,
     cssSelector: `p[class|="color"]`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p[class|="color"] {
     color: #f00;
   }
@@ -180,7 +179,7 @@ const arr = [
     domStructure: ``,
     cssSelector: `:root`,
     cssStyle: `background: #f00;`,
-    csstructure: `
+    cssStructure: `
   :root {
     background: #f00;
   }
@@ -200,7 +199,7 @@ const arr = [
     `,
     cssSelector: `p:nth-child(2n+1)`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:nth-child(2n+1) {
     color: #00f;
   }
@@ -220,7 +219,7 @@ const arr = [
     `,
     cssSelector: `p:nth-last-child(2)`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:nth-last-child(2) {
     color: #00f;
   }
@@ -243,7 +242,7 @@ const arr = [
     `,
     cssSelector: `p:nth-of-type(2n+1)`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:nth-of-type(2n+1) {
     color: #00f;
   }
@@ -266,7 +265,7 @@ const arr = [
     `,
     cssSelector: `p:nth-last-of-type(2)`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:nth-last-of-type(2) {
     color: #00f;
   }
@@ -284,7 +283,7 @@ const arr = [
     `,
     cssSelector: `p:first-child`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:first-child {
     color: #00f;
   }
@@ -302,7 +301,7 @@ const arr = [
     `,
     cssSelector: `p:last-child`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:last-child {
     color: #00f;
   }
@@ -321,7 +320,7 @@ const arr = [
     `,
     cssSelector: `p:first-of-type`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:first-of-type {
     color: #00f;
   }
@@ -340,7 +339,7 @@ const arr = [
     `,
     cssSelector: `p:last-of-type`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:last-of-type {
     color: #00f;
   }
@@ -361,7 +360,7 @@ const arr = [
     `,
     cssSelector: `span:only-child`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   span:only-child {
     color: #00f;
   }
@@ -383,7 +382,7 @@ const arr = [
     `,
     cssSelector: `span:only-of-type`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   span:only-of-type {
     color: #00f;
   }
@@ -403,7 +402,7 @@ const arr = [
     `,
     cssSelector: `p:empty`,
     cssStyle: `background: #f00; width: 348px;height: 10px;`,
-    csstructure: `
+    cssStructure: `
   p:empty {
     background: #00f;
     width: 348px;
@@ -422,7 +421,7 @@ const arr = [
     `,
     cssSelector: `example-area`,
     cssStyle: ``,
-    csstructure: `
+    cssStructure: `
     a:link { color:#00f }
     a:visited { color:#f00 }
     a:active { color:#00f }
@@ -448,7 +447,7 @@ const arr = [
     `,
     cssSelector: `p:lang(en)`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   p:lang(en) {
     color: #f00;
   }`,
@@ -464,7 +463,7 @@ const arr = [
     `,
     cssSelector: `input:enabled`,
     cssStyle: `color: #f00;`,
-    csstructure: `
+    cssStructure: `
   input:enabled {
     color: #f00;
   }`,
@@ -480,7 +479,7 @@ const arr = [
     `,
     cssSelector: `input:disabled`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   input:disabled {
     color: #00f;
   }`,
@@ -497,7 +496,7 @@ const arr = [
     `,
     cssSelector: `input`,
     cssStyle: ``,
-    csstructure: `
+    cssStructure: `
   input:checked {
     box-shadow: 0 0 0 3px orange;
   }`,
@@ -513,7 +512,7 @@ const arr = [
     `,
     cssSelector: `p`,
     cssStyle: ``,
-    csstructure: `
+    cssStructure: `
   .line::first-line {
     color: #f00;
   }`,
@@ -529,7 +528,7 @@ const arr = [
     `,
     cssSelector: `p`,
     cssStyle: ``,
-    csstructure: `
+    cssStructure: `
   .letter::first-letter {
     color: #f00;
   }`,
@@ -545,7 +544,7 @@ const arr = [
     `,
     cssSelector: `p`,
     cssStyle: ``,
-    csstructure: `
+    cssStructure: `
   .text::before {
     content: 'Pseudo text.';
     color: #00f;
@@ -562,7 +561,7 @@ const arr = [
     `,
     cssSelector: `p`,
     cssStyle: ``,
-    csstructure: `
+    cssStructure: `
   .text2::after {
     content: 'Pseudo text.';
     color: #00f;
@@ -579,7 +578,7 @@ const arr = [
     `,
     cssSelector: `.text3`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   .text3 {
     color: #00f;
   }`,
@@ -595,7 +594,7 @@ const arr = [
     `,
     cssSelector: `#myid`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   #myid {
     color: #00f;
   }`,
@@ -612,7 +611,7 @@ const arr = [
     `,
     cssSelector: `p:not(.text3)`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   p:not(.text3) {
     color: #00f;
   }`,
@@ -629,7 +628,7 @@ const arr = [
     `,
     cssSelector: `p span`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   p span {
     color: #00f;
   }`,
@@ -647,7 +646,7 @@ const arr = [
     `,
     cssSelector: `p > span`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   p > span {
     color: #00f;
   }`,
@@ -665,7 +664,7 @@ const arr = [
     `,
     cssSelector: `p + span`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   p + span {
     color: #00f;
   }`,
@@ -683,7 +682,7 @@ const arr = [
     `,
     cssSelector: `p ~ span`,
     cssStyle: `color: #00f;`,
-    csstructure: `
+    cssStructure: `
   p ~ span {
     color: #00f;
   }`,
@@ -691,23 +690,25 @@ const arr = [
   },
 ];
 
-const select = document.querySelector('#select');
-select.addEventListener('change', getOptionValue);
+const select = document.querySelector("#select");
+select.addEventListener("change", getOptionValue);
 function getOptionValue(e) {
   const optionValue = e.target.value;
   // 處理例外情況
-  if(optionValue === '10') {
-    document.body.style.background = 'transparent';
+  if (optionValue === "10") {
+    document.body.style.background = "transparent";
+  } else {
+    document.body.style.background = "cornsilk";
   }
-  else {
-    document.body.style.background = 'cornsilk';
-  }
-  document.querySelector('.example-area').innerHTML = arr[optionValue].domStructure;
-  document.querySelectorAll(`${arr[optionValue].cssSelector}`).forEach(el => {
+  document.querySelector(".example-area").innerHTML =
+    arr[optionValue].domStructure;
+  document.querySelectorAll(`${arr[optionValue].cssSelector}`).forEach((el) => {
     el.style = arr[optionValue].cssStyle;
-  })
-  document.querySelector('.dom-area pre').textContent = arr[optionValue].domStructure;
-  document.querySelector('.css-area pre').textContent = arr[optionValue].csstructure;
-  document.querySelector('.skill-area').textContent = arr[optionValue].description;
+  });
+  document.querySelector(".dom-area pre").textContent =
+    arr[optionValue].domStructure;
+  document.querySelector(".css-area pre").textContent =
+    arr[optionValue].cssStructure;
+  document.querySelector(".skill-area").textContent =
+    arr[optionValue].description;
 }
-
