@@ -642,6 +642,7 @@ const arr = [
       <span>Lorem ipsum dolor sit amet.</span>
       <i>Lorem ipsum dolor sit amet.</i>
     </p>
+    <span>Lorem ipsum dolor sit amet.</span>
   </div>
     `,
     cssSelector: `p > span`,
