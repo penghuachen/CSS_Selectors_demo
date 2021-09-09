@@ -641,6 +641,9 @@ const arr = [
     <p>Lorem ipsum dolor sit amet. 
       <span>Lorem ipsum dolor sit amet.</span>
       <i>Lorem ipsum dolor sit amet.</i>
+      <div>
+        <span>Lorem ipsum dolor sit amet.</span>
+      </div>
     </p>
     <span>Lorem ipsum dolor sit amet.</span>
   </div>
